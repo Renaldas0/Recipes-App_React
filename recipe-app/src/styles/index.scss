@@ -13,9 +13,69 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    font-size: var(--font-size);
+    font-family: 'Roboto', sans-serif;
 }
 
 .navbar {
     height: 50px;
+    box-shadow: 0 1rem 2rem var(--shadow-color);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
+    .logo {
+        font-size: 1.5em;
+        font-weight: bolder;
+        color: var(--primary-color);
+        text-shadow: 0 1px 3px var(--text-color);
+
+        span {
+            color: var(--text-color);
+        }
+    }
+
+    .nav-links {
+        a {
+            margin-left: 1em;
+            color: var(--text-light);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            position: relative;
+
+            &::before {
+                content: '';
+                display: inline-block;
+                height: 3px;
+                width: 100%;
+                background-color: var(--primary-color);
+                position: absolute;
+                bottom: -3px;
+                left: 0;
+                transform: scaleX(0);
+                transition: transform calc(var(--animation-speed) * .3s) ease;
+            }
+
+            &:hover {
+                &::before {
+                    transform: scaleX(1);
+                }
+            }
+
+            &.active {
+                color: var(--primary-color);
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+.container {
+    padding-inline: 10vw;
 }
