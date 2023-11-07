@@ -9,6 +9,10 @@
     --animation-speed: 1;
 }
 
+@function getAnimationSpeed($duration: number) {
+    @return calc($duration * var(--animation-speed));
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -59,7 +63,7 @@ body {
                 bottom: -3px;
                 left: 0;
                 transform: scaleX(0);
-                transition: transform calc(var(--animation-speed) * .3s) ease;
+                transition: getAnimationSpeed(.3s) ease;
             }
 
             &:hover {
@@ -74,8 +78,70 @@ body {
             }
         }
     }
+
+    .sidebar-btn {
+        height: 28px;
+        width: 32px;
+        position: relative;
+        display: none;
+        cursor: pointer;
+
+        .bar {
+            height: 6px;
+            width: 100%;
+            background-color: var(--text-color);
+            position: absolute;
+            border-radius: 1rem;
+            transition: transform getAnimationSpeed(.2s) ease;
+
+            &:nth-child(1) {
+                top: 0;
+            }
+
+            &:nth-child(2) {
+                top: 50%;
+                transform: translateY(-50%);
+            }
+
+            &:nth-child(3) {
+                top: 100%;
+                transform: translateY(-100%);
+            }
+        }
+
+        &.active {
+            .bar {
+                transform-origin: center;
+                top: 50%;
+
+                &:nth-child(1) {
+                    transform: translate(0, -50%) scale(1) rotate(45deg);
+                }
+
+                &:nth-child(2) {
+                    transform: scaleX(0);
+                }
+
+                &:nth-child(3) {
+                    transform: translate(0, -50%) scale(1) rotate(-45deg);
+                }
+            }
+        }
+    }
 }
 
 .container {
     padding-inline: 10vw;
+}
+
+@media screen and (max-width:768px) {
+    .navbar {
+        .nav-links {
+            display: none;
+        }
+
+        .sidebar-btn {
+            display: block;
+        }
+    }
 }
