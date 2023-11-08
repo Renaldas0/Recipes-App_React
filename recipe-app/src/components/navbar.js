@@ -22,6 +22,10 @@ function NavBar() {
             icon: faCog
         }
     ]
+
+    function closeSidebar() {
+        setShowSideBar(false);
+    }
     return (
         <>
             <div className="navbar container">
@@ -34,13 +38,14 @@ function NavBar() {
                     <a href="#">Recipes</a>
                     <a href="#">Settings</a> */}
                 </div>
-                <div onClick={() => setShowSideBar(!showSideBar)} className={showSideBar ? "sidebar-btn active" : "sidebar-btn"}>
+                <div onClick={() => setShowSideBar(true)} className={showSideBar ? "sidebar-btn active" : "sidebar-btn"}>
                     <div className="bar"></div>
                     <div className="bar"></div>
                     <div className="bar"></div>
                 </div>
             </div>
-            <Sidebar links={links} />
+            {showSideBar && <Sidebar close={closeSidebar} links={links} />}
+
         </>
     )
 }
