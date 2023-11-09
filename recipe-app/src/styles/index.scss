@@ -66,12 +66,14 @@ img {
 .section {
     display: flex;
     align-items: center;
+    margin-bottom: 3vw;
 
     .title {
         color: var(--text-color);
-        font-size: 3em;
+        font-size: 2.5em;
         text-transform: capitalize;
         margin-bottom: .25em;
+        font-weight: 900;
     }
 
     .info {
@@ -87,22 +89,38 @@ img {
     }
 }
 
-.section.hero {
-    .typography {
-        padding-right: 1em;
+@import "partials/hero-section.scss";
+
+.section.improve-skills {
+    .img {
+        img {
+            width: 100%;
+        }
     }
 
-    .gallery {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 1.75vw;
+    .col.typography {
+        padding-left: 1em;
 
-        .custom-image {
-            transform: scale(0);
+        .skill-item {
+            border-left: .3em solid var(--primary-color);
+            margin-bottom: .5em;
+            padding: .1em 0 .1em .5em;
+            color: var(--text-light);
+            font-weight: bold;
+            transform: translateX(100%);
             opacity: 0;
-            border-radius: 3px;
-            overflow: hidden;
-            animation: getAnimationSpeed(.5s) popOut forwards;
+            animation: getAnimationSpeed(.3s) slideInRight forwards;
+
+            @for $i from 1 through 7 {
+                &:nth-child(#{$i}) {
+                    animation-delay: #{$i * .1}s;
+
+                }
+            }
+        }
+
+        .btn {
+            margin-top: 1em;
         }
     }
 }
