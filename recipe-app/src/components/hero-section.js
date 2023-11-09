@@ -21,7 +21,7 @@ function HeroSection() {
             </div>
             <div className="col gallery">
                 {images.map((img, index) => (
-                    <CustomImage key={index} imgSrc={img} pt={"90%"} />
+                    <CustomImage key={index} imgSrc={img} pt={"85%"} />
                 ))}
             </div>
         </div>
