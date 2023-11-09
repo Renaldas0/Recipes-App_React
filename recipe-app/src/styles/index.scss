@@ -1,5 +1,3 @@
-@import "partials/animations.scss";
-
 :root {
     --background-color: #fff;
     --background-light: #fff;
@@ -54,66 +52,22 @@ img {
     width: 100%;
     position: relative;
 
-    .bar {
-        height: 6px;
-        width: 100%;
-        background-color: var(--text-color);
+    img {
         position: absolute;
-        border-radius: 1rem;
-        transition: transform getAnimationSpeed(.2s) ease;
-
-        &:nth-child(1) {
-            top: 0;
-        }
-
-        &:nth-child(2) {
-            top: 50%;
-            transform: translateY(-50%);
-        }
-
-        &:nth-child(3) {
-            top: 100%;
-            transform: translateY(-100%);
-        }
-    }
-
-    &.active {
-        .bar {
-            transform-origin: center;
-            top: 50%;
-
-            &:nth-child(1) {
-                transform: translate(0, -50%) scale(1) rotate(45deg);
-            }
-
-            &:nth-child(2) {
-                transform: scaleX(0);
-            }
-
-            &:nth-child(3) {
-                transform: translate(0, -50%) scale(1) rotate(-45deg);
-            }
-        }
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
     }
 }
-}
 
-.sidebar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    width: 250px;
-    background-color: var(--background-color);
-    box-shadow: 0 0 0 1000px rgba(0, 0, 0, 0.2),
-        3px 0 5px var(--shadow-color);
-    animation: getAnimationSpeed(.5s) slideInLeft;
+@import "partials/navbar.scss";
 
-    .sidebar-link {
-        display: block;
-        padding: .5em 1em;
-        border-left: .4em solid transparent;
-        margin-bottom: 1em;
+.section {
+    display: flex;
+    align-items: center;
+
+    .title {
         color: var(--text-color);
         font-size: 3em;
         text-transform: capitalize;
@@ -161,6 +115,7 @@ img {
     padding-inline: 10vw;
 }
 
+@import "partials/animations.scss";
 @media screen and (max-width:768px) {
     .navbar {
         .nav-links {
