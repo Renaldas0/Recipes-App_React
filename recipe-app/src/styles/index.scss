@@ -93,27 +93,9 @@ img {
 
 @import "partials/improve-skills.scss";
 
-.section.quote {
-    display: block;
+@import "partials/quote-section.scss";
 
-    .quote-text {
-        font-size: 1.2em;
-        line-height: 1.3;
-        color: var(--text-color);
-
-        svg {
-            color: var(--primary-color);
-            font-size: 1.5em;
-            margin: 0 .4em;
-        }
-    }
-
-    .quote-author {
-        color: var(--text-light);
-        text-align: right;
-        margin-top: 1em;
-    }
-}
+.section.chefs {}
 
 .main {
     padding-block: 3vw;
