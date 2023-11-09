@@ -1,3 +1,5 @@
+@import "partials/animations.scss";
+
 :root {
     --background-color: #fff;
     --background-light: #fff;
@@ -47,12 +49,12 @@ body {
 
     .nav-links {
         a {
-            margin-left: 1em;
+            margin-left: 2em;
             color: var(--text-light);
             letter-spacing: 1px;
             text-transform: uppercase;
             position: relative;
-            font-size: .9em;
+            font-size: 1em;
 
             &::before {
                 content: '';
@@ -144,7 +146,7 @@ body {
 
     .sidebar-link {
         display: block;
-        padding: .5em 1em;
+        padding: .6em 1em;
         border-left: .4em solid transparent;
         margin-bottom: 1em;
         color: var(--text-color);
@@ -178,7 +180,6 @@ body {
     padding-inline: 10vw;
 }
 
-@import "partials/animations.scss";
 @media screen and (max-width:768px) {
     .navbar {
         .nav-links {
