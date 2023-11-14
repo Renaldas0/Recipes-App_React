@@ -66,12 +66,14 @@ img {
 .section {
     display: flex;
     align-items: center;
+    margin-bottom: 3vw;
 
     .title {
         color: var(--text-color);
-        font-size: 3em;
+        font-size: 2.5em;
         text-transform: capitalize;
         margin-bottom: .25em;
+        font-weight: 900;
     }
 
     .info {
@@ -87,25 +89,13 @@ img {
     }
 }
 
-.section.hero {
-    .typography {
-        padding-right: 1em;
-    }
+@import "partials/hero-section.scss";
 
-    .gallery {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 1.75vw;
+@import "partials/improve-skills.scss";
 
-        .custom-image {
-            transform: scale(0);
-            opacity: 0;
-            border-radius: 3px;
-            overflow: hidden;
-            animation: getAnimationSpeed(.5s) popOut forwards;
-        }
-    }
-}
+@import "partials/quote-section.scss";
+
+.section.chefs {}
 
 .main {
     padding-block: 3vw;
