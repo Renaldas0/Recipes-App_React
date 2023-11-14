@@ -95,65 +95,28 @@ img {
 
 @import "partials/quote-section.scss";
 
-.section.chefs {
-    display: block;
-}
+@import "partials/chefs-section.scss";
 
-.chefs-container {
+.footer {
+    background-color: #0f0f0f;
+    color: #fff;
+    padding-block: 2.5em;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-gap: 1.5em;
-    margin-top: 3em;
-}
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-gap: 1em;
+    border-radius: 3px;
 
-.chef-card {
-    display: flex;
-    height: 120px;
-    box-shadow: 0 3px 6px var(--shadow-color);
+    .footer-section {
+        p {
+            opacity: .9;
+            margin-bottom: .5em;
+        }
 
-    img {
-        height: 100%;
-        width: 120px;
-        border-radius: 5px;
-    }
-
-    .chef-card-info {
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        padding: .5em 1em;
-
-        .chef-card-name {
-            font-size: 1.4em;
+        p.title {
+            opacity: 1;
+            font-size: 1.1em;
             font-weight: bold;
-            color: var(--text-color);
-        }
-
-        .chef-card-recipes,
-        .chef-card-cuisine {
-            color: var(--text-light);
-            font-size: 1.2em;
-        }
-
-        .chef-icons {
-            font-size: 1.2em;
-
-            svg {
-                margin-right: .5em;
-
-                &:nth-child(1) {
-                    color: #0063f7;
-                }
-
-                &:nth-child(2) {
-                    color: #13b4ff;
-                }
-
-                &:nth-child(3) {
-                    color: #ff00b3;
-                }
-            }
+            margin-bottom: 1em;
         }
     }
 }
