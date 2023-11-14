@@ -2,15 +2,15 @@ import CustomImage from "./customImage";
 
 function HeroSection() {
     const images = [
-        "/img/food/img-1.jpg",
-        "/img/food/img-2.jpg",
-        "/img/food/img-3.jpg",
-        "/img/food/img-4.jpg",
-        "/img/food/img-5.jpg",
-        "/img/food/img-6.jpg",
-        "/img/food/img-7.jpg",
-        "/img/food/img-8.jpg",
-        "/img/food/img-9.jpg",
+        "/img/food/img1.jpg",
+        "/img/food/img2.jpg",
+        "/img/food/img3.jpg",
+        "/img/food/img4.jpg",
+        "/img/food/img5.jpg",
+        "/img/food/img6.jpg",
+        "/img/food/img7.jpg",
+        "/img/food/img8.jpg",
+        "/img/food/img9.jpg",
     ]
     return (
         <div className="section hero">
