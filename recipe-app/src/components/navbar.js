@@ -35,7 +35,7 @@ function NavBar() {
                 <a href="#!" className="logo"><span>Easy</span>_Recipes</a>
                 <div className="nav-links">
                     {links.map(link => (
-                        <Link className={location.pathname == link.path ? "nav-links active" : "nav-links"} to={link.path} key={link.name}>{link.name}</Link>
+                        <Link className={location.pathname === link.path ? "nav-links active" : "nav-links"} to={link.path} key={link.name}>{link.name}</Link>
                     ))}
                     {/* <a href="#">Home</a>
                     <a href="#">Recipes</a>

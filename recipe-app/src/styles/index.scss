@@ -101,6 +101,59 @@ img {
 
 @import "partials/footer.scss";
 
+.previous-searches {
+    display: block;
+
+    h2 {
+        color: var(--text-color);
+        font-size: 1.5em;
+        font-weight: 900;
+        margin-bottom: .5em;
+    }
+
+    .previous-searches-container {
+        .search-item {
+            background-color: var(--primary-color);
+            display: inline-block;
+            padding: .5em 1em;
+            color: #fff;
+            margin: 0 1em 1em 0;
+            border-radius: 3em;
+            box-shadow: 0 3px 6px var(--shadow-color);
+            transform: translateX(100%);
+            opacity: 0;
+            animation: getAnimationSpeed(.5s) slideInRight forwards;
+        }
+    }
+
+    .search-box {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        height: 35px;
+
+        input,
+        .btn {
+            height: 35px;
+        }
+
+        input {
+            min-width: 250px;
+            padding: 0 .75em;
+            font-size: 1em;
+            border-radius: 20px 0 0 20px;
+            outline: none;
+            border: 1px solid #4d4d4d;
+        }
+
+        .btn {
+            border-radius: 0 20px 20px 0;
+            padding-inline: 1em;
+            padding-block: 0;
+        }
+    }
+}
+
 .main {
     padding-block: 3vw;
 }
