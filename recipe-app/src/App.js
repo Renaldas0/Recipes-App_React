@@ -1,22 +1,29 @@
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route
+} from "react-router-dom"
+
 import NavBar from "./components/navbar";
-import HeroSection from "./components/hero-section";
-import ImproveSkills from "./components/improveSkills";
-import QuoteSection from "./components/quoteSection";
-import ChefsSection from "./components/chefsSection";
+import Home from "./pages/home";
 import Footer from "./components/footer";
+
+import Recipes from "./pages/recipes";
+import Settings from "./pages/settings";
 
 function App() {
   return (
-    <div className="App">
+    <Router>
       <NavBar />
       <div className="container main">
-        <HeroSection />
-        <ImproveSkills />
-        <QuoteSection />
-        <ChefsSection />
-        <Footer />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/recipes" element={<Recipes />} />
+          <Route path="/settings" element={<Settings />} />
+        </Routes>
       </div>
-    </div>
+      <Footer />
+    </Router>
   );
 }
 
