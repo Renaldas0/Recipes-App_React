@@ -6,6 +6,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    z-index: 998;
+    position: fixed;
+    top: 0;
+    width: 100%;
 
     .logo {
         font-size: 1.5em;
@@ -114,6 +118,7 @@
     box-shadow: 0 0 0 1000px rgba(0, 0, 0, 0.2),
         3px 0 5px var(--shadow-color);
     animation: getAnimationSpeed(.5s) slideInLeft;
+    z-index: 999;
 
     .sidebar-link {
         display: block;

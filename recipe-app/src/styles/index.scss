@@ -23,6 +23,7 @@
 body {
     font-size: var(--font-size);
     font-family: 'Roboto', sans-serif;
+    padding-top: 55px;
 }
 
 img {
@@ -65,6 +66,7 @@ img {
 
 .section {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     margin-bottom: 3vw;
 
@@ -97,40 +99,44 @@ img {
 
 @import "partials/chefs-section.scss";
 
-.footer {
-    background-color: #0f0f0f;
-    color: #fff;
-    padding-block: 2.5em;
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr;
-    grid-gap: 1em;
-    border-radius: 3px;
-
-    .footer-section {
-        p {
-            opacity: .9;
-            margin-bottom: .5em;
-        }
-
-        p.title {
-            opacity: 1;
-            font-size: 1.1em;
-            font-weight: bold;
-            margin-bottom: 1em;
-        }
-    }
-}
+@import "partials/footer.scss";
 
 .main {
     padding-block: 3vw;
 }
 
 .container {
-    padding-inline: 10vw;
+    padding-inline: 25vw;
 }
 
 @import "partials/animations.scss";
+
+@media screen and (max-width:1280px) {
+    .container {
+        padding-inline: 18vw;
+    }
+}
+
+@media screen and (max-width:1050px) {
+    .container {
+        padding-inline: 12vw;
+    }
+}
+
 @media screen and (max-width:768px) {
+    .container {
+        padding-inline: 6vw;
+    }
+
+    .section {
+        .col {
+            width: 100%;
+            padding: 0 !important;
+            text-align: center;
+            margin-bottom: 3em;
+        }
+    }
+
     .navbar {
         .nav-links {
             display: none;
@@ -139,5 +145,35 @@ img {
         .sidebar-btn {
             display: block;
         }
+    }
+
+    .section.improve-skills .btn {
+        display: block;
+        margin-left: 50%;
+        transform: translate(-50%);
+    }
+
+    .skill-item {
+        display: inline-block;
+        margin: .5em;
+    }
+
+    .footer {
+        grid-template-columns: repeat(4, 1fr);
+
+        .footer-section:nth-child(1) {
+            grid-column: span 4;
+        }
+
+        .footer-section:nth-child(2),
+        .footer-section:nth-child(3) {
+            grid-column: span 2;
+        }
+    }
+}
+
+@media screen and (max-width:480px) {
+    .container {
+        padding-inline: 3vw;
     }
 }
