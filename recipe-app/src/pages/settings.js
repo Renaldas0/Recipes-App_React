@@ -1,10 +1,58 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function Settings() {
 
+    const [settings, setSettings] = useState({
+        '--background-color': '#fff',
+        '--background-light': '#fff',
+        '--shadow-color': 'rgba(0, 0, 0, 0.2)',
+        '--primary-color': 'rgb(255, 0, 86)',
+        '--text-color': '#0a0a0a',
+        '--text-light': '#575757',
+        '--font-size': '16px',
+        '--animation-speed': 1
+    });
+    useEffect(() => {
+        const root = document.documentElement
+        for (let key in settings) {
+            root.style.setProperty(key, settings[key]);
+        }
+    }, [settings])
+
+    const [theme, setTheme] = useState("light");
+    const themes = [
+        {
+            '--background-color': '#fff',
+            '--background-light': '#fff',
+            '--shadow-color': 'rgba(0, 0, 0, 0.2)',
+            '--text-color': '#0a0a0a',
+            '--text-light': '#575757'
+        },
+        {
+            '--background-color': 'rgb(29, 29, 29)',
+            '--background-light': 'rgb(77, 77, 77)',
+            '--shadow-color': 'rgba(0, 0, 0, 0.2)',
+            '--primary-color': 'rgb(255, 0, 86)',
+            '--text-color': '#fff',
+            '--text-light': '#eceaea',
+        }
+    ];
+
+    function changeTheme(i) {
+        const _theme = { ...themes[i] };
+        setTheme(i === 0 ? "light" : "dark");
+        // Update settings
+        let _settings = { ...settings }
+        for (let key in _theme) {
+            _settings[key] = _theme[key]
+        }
+        setSettings(_settings)
+    }
+
+    const [primaryColor, setPrimaryColor] = useState(0);
     const primaryColors = [
         "rgb(255, 0, 86)",
         "rgb(33, 150, 243)",
@@ -43,17 +91,15 @@ function Settings() {
         },
     ];
 
-    const [theme, setTheme] = useState("light");
-    const [primaryColor, setPrimaryColor] = useState(0);
     const [fontSize, setFontSize] = useState(1);
     const [animationSpeed, setAnimationSpeed] = useState(1);
 
     return (
         <div>
             <div className="section d-block">
-                <h2>Preferred Theme</h2>
+                <h2>Choose Theme</h2>
                 <div className="options-container">
-                    <div className="option light">
+                    <div className="option light" onClick={() => changeTheme(0)}>
 
                         {theme === "light" && (
                             <div className="check">
@@ -61,7 +107,7 @@ function Settings() {
                             </div>
                         )}
                     </div>
-                    <div className="option dark">
+                    <div className="option dark" onClick={() => changeTheme(1)}>
                         {theme === "dark" && (
                             <div className="check">
                                 <FontAwesomeIcon icon={faCheck} />
