@@ -4,44 +4,44 @@ import RecipeCard from "../components/recipeCard";
 function Recipes() {
     const recipes = [
         {
-            title: "Chicken Pan Pizza",
+            title: "Shrimp fried rice",
             image: "/img/food/img1.jpg",
-            authorImg: "/img/chefs/chef-ann-schvets.jpg",
+            authorImg: "/img/chefs/chef-morna-tang.jpg",
         },
         {
-            title: "Chicken Pan Pizza",
+            title: "Savoury Sweet Pancakes",
             image: "/img/food/img2.jpg",
-            authorImg: "/img/chefs/chef-ann-schvets.jpg",
+            authorImg: "/img/chefs/chef-anna-terezevich.jpg",
         },
         {
-            title: "Chicken Pan Pizza",
+            title: "Mushroom Noodle Soup",
             image: "/img/food/img3.jpg",
-            authorImg: "/img/chefs/chef-ann-schvets.jpg",
+            authorImg: "/img/chefs/chef-morna-tang.jpg",
         },
         {
-            title: "Chicken Pan Pizza",
+            title: "Shrimp Noodle Soup",
             image: "/img/food/img4.jpg",
-            authorImg: "/img/chefs/chef-ann-schvets.jpg",
+            authorImg: "/img/chefs/chef-morna-tang.jpg",
         },
         {
-            title: "Chicken Pan Pizza",
+            title: "Classic Ceasar Salad",
             image: "/img/food/img5.jpg",
             authorImg: "/img/chefs/chef-ann-schvets.jpg",
         },
         {
-            title: "Chicken Pan Pizza",
+            title: "Steak",
             image: "/img/food/img6.jpg",
-            authorImg: "/img/chefs/chef-ann-schvets.jpg",
+            authorImg: "/img/chefs/chef-vadim-markin.jpg",
         },
         {
-            title: "Chicken Pan Pizza",
+            title: "Almost English Breakfast",
             image: "/img/food/img7.jpg",
-            authorImg: "/img/chefs/chef-ann-schvets.jpg",
+            authorImg: "/img/chefs/chef-anna-terezevich.jpg",
         },
         {
-            title: "Chicken Pan Pizza",
+            title: "Shrimp Spaghetti",
             image: "/img/food/img8.jpg",
-            authorImg: "/img/chefs/chef-ann-schvets.jpg",
+            authorImg: "/img/chefs/chef-tirachard-kumtanom.jpg",
         },
     ].sort(() => Math.random() - 0.5);
 
