@@ -61,6 +61,14 @@ function Settings() {
         "rgb(156, 39, 176)"
     ];
 
+    function changeColor(i) {
+        const _color = primaryColors[i];
+        let _settings = { ...settings }
+        _settings["--primary-color"] = _color
+        setPrimaryColor(i)
+        setSettings(_settings);
+    }
+
     const fontSizes = [
         {
             title: "Small",
@@ -75,6 +83,16 @@ function Settings() {
             value: "20px"
         },
     ];
+
+    const [fontSize, setFontSize] = useState(1);
+
+    function changeFontSize(i) {
+        const _fontSize = fontSizes[i];
+        let _settings = { ...settings }
+        _settings["--font-size"] = _fontSize.value
+        setFontSize(i)
+        setSettings(_settings);
+    };
 
     const animationSpeeds = [
         {
@@ -91,8 +109,16 @@ function Settings() {
         },
     ];
 
-    const [fontSize, setFontSize] = useState(1);
     const [animationSpeed, setAnimationSpeed] = useState(1);
+
+    function changeAnimationSpeed(i) {
+        const _animationSpeed = animationSpeeds[i];
+        let _settings = { ...settings }
+        _settings["--animation-speed"] = _animationSpeed.value
+        setAnimationSpeed(i)
+        setSettings(_settings);
+    };
+
 
     return (
         <div>
@@ -121,13 +147,14 @@ function Settings() {
                 <h2>Primary Colour</h2>
                 <div className="options-container">
                     {primaryColors.map((color, index) => (
-                        <div className="option light" style={{ backgroundColor: color }}>
+                        <div className="option light" style={{ backgroundColor: color }} on onClick={() => changeColor(index)}>
 
                             {primaryColor === index && (
                                 <div className="check">
                                     <FontAwesomeIcon icon={faCheck} />
                                 </div>
                             )}
+
                         </div>
                     ))}
                 </div>
@@ -138,7 +165,7 @@ function Settings() {
                 <div className="options-container">
                     {fontSizes.map((size, index) => (
 
-                        <button className="btn">
+                        <button className="btn" onClick={() => changeFontSize(index)}>
                             {size.title}
 
                             {fontSize === index && (
@@ -155,7 +182,7 @@ function Settings() {
                 <div className="options-container">
                     {animationSpeeds.map((speed, index) => (
 
-                        <button className="btn">
+                        <button className="btn" onClick={() => changeAnimationSpeed(index)}>
                             {speed.title}
 
                             {animationSpeed === index && (
