@@ -5,43 +5,43 @@ function Recipes() {
     const recipes = [
         {
             title: "Shrimp fried rice",
-            image: "/img/food/img1.jpg",
-            authorImg: "/img/chefs/chef-morna-tang.jpg",
+            image: "Recipes-App_React/img/food/img1.jpg",
+            authorImg: "Recipes-App_React/img/chefs/chef-morna-tang.jpg",
         },
         {
             title: "Savoury Sweet Pancakes",
-            image: "/img/food/img2.jpg",
-            authorImg: "/img/chefs/chef-anna-terezevich.jpg",
+            image: "Recipes-App_React/img/food/img2.jpg",
+            authorImg: "Recipes-App_React/img/chefs/chef-anna-terezevich.jpg",
         },
         {
             title: "Mushroom Noodle Soup",
-            image: "/img/food/img3.jpg",
-            authorImg: "/img/chefs/chef-morna-tang.jpg",
+            image: "Recipes-App_React/img/food/img3.jpg",
+            authorImg: "Recipes-App_React/img/chefs/chef-morna-tang.jpg",
         },
         {
             title: "Shrimp Noodle Soup",
-            image: "/img/food/img4.jpg",
-            authorImg: "/img/chefs/chef-morna-tang.jpg",
+            image: "Recipes-App_React/img/food/img4.jpg",
+            authorImg: "Recipes-App_React/img/chefs/chef-morna-tang.jpg",
         },
         {
             title: "Classic Ceasar Salad",
-            image: "/img/food/img5.jpg",
-            authorImg: "/img/chefs/chef-ann-schvets.jpg",
+            image: "Recipes-App_React/img/food/img5.jpg",
+            authorImg: "Recipes-App_React/img/chefs/chef-ann-schvets.jpg",
         },
         {
             title: "Steak",
-            image: "/img/food/img6.jpg",
-            authorImg: "/img/chefs/chef-vadim-markin.jpg",
+            image: "Recipes-App_React/img/food/img6.jpg",
+            authorImg: "Recipes-App_React/img/chefs/chef-vadim-markin.jpg",
         },
         {
             title: "Almost English Breakfast",
-            image: "/img/food/img7.jpg",
-            authorImg: "/img/chefs/chef-anna-terezevich.jpg",
+            image: "Recipes-App_React/img/food/img7.jpg",
+            authorImg: "Recipes-App_React/img/chefs/chef-anna-terezevich.jpg",
         },
         {
             title: "Shrimp Spaghetti",
-            image: "/img/food/img8.jpg",
-            authorImg: "/img/chefs/chef-tirachard-kumtanom.jpg",
+            image: "Recipes-App_React/img/food/img8.jpg",
+            authorImg: "Recipes-App_React/img/chefs/chef-tirachard-kumtanom.jpg",
         },
     ].sort(() => Math.random() - 0.5);
 
