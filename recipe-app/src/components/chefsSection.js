@@ -4,37 +4,37 @@ function ChefsSection() {
     const chefs = [
         {
             name: "Ann Schvets",
-            img: "Recipes-App_React/img/chefs/chef-ann-schvets.jpg",
+            img: "./img/chefs/chef-ann-schvets.jpg",
             recipes: "10",
             cuisine: "Greek",
         },
         {
             name: "Anna Terezevich",
-            img: "Recipes-App_React/img/chefs/chef-anna-terezevich.jpg",
+            img: "./img/chefs/chef-anna-terezevich.jpg",
             recipes: "07",
             cuisine: "European",
         },
         {
             name: "Kampus Sergei",
-            img: "Recipes-App_React/img/chefs/chef-kampus.jpg",
+            img: "./img/chefs/chef-kampus.jpg",
             recipes: "14",
             cuisine: "Mexican",
         },
         {
             name: "Morna Tang",
-            img: "Recipes-App_React/img/chefs/chef-morna-tang.jpg",
+            img: "./img/chefs/chef-morna-tang.jpg",
             recipes: "11",
             cuisine: "Korean",
         },
         {
             name: "Tirachard Kumtanom",
-            img: "Recipes-App_React/img/chefs/chef-tirachard-kumtanom.jpg",
+            img: "./img/chefs/chef-tirachard-kumtanom.jpg",
             recipes: "09",
             cuisine: "Italian",
         },
         {
             name: "Vadim Markin",
-            img: "Recipes-App_React/img/chefs/chef-vadim-markin.jpg",
+            img: "./img/chefs/chef-vadim-markin.jpg",
             recipes: "16",
             cuisine: "French",
         },

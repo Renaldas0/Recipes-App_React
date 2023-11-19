@@ -5,7 +5,7 @@ function HeroSection() {
         "./img/food/img1.jpg",
         "./img/food/img2.jpg",
         "./img/food/img3.jpg",
-        "/img/food/img4.jpg",
+        "./img/food/img4.jpg",
         "./img/food/img5.jpg",
         "./img/food/img6.jpg",
         "./img/food/img7.jpg",
