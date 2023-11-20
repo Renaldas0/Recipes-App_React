@@ -5,9 +5,8 @@ import { faQuoteRight } from "@fortawesome/free-solid-svg-icons";
 function QuoteSection() {
     return (
         <div className="section quote">
-            <p className="quote-text"><FontAwesomeIcon icon={faQuoteLeft} /> lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
-                lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum. <FontAwesomeIcon icon={faQuoteRight} /></p>
-            <p className="quote-author">- Author Name</p>
+            <p className="quote-text"><FontAwesomeIcon icon={faQuoteLeft} /> Good food is very often, even most often, simple food. <FontAwesomeIcon icon={faQuoteRight} /></p>
+            <p className="quote-author">- Anthony Bourdain</p>
         </div>
     )
 }
