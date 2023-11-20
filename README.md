@@ -4,6 +4,15 @@
 
 ![Screenshot (272)](https://github.com/Renaldas0/Recipes-App_React/assets/97538312/52665aa7-47c9-4389-8f0c-8f918a3fa435)
 
+## Technologies used:
+
+- HTML
+- CSS / SCSS
+- JavaScript ES6
+- React js
+- Fontawesome
+- Git
+
 ### Purpose
 - The purpose of this website is to mainly demonstrate my skills as a frontend developer using React, Javascript and SASS.
 - As a website it serves to allow users to easily find recipes that they can cook at home, find pictures of these recipes and the chef who makes it.
